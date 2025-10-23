@@ -199,3 +199,6 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+This license does not apply to code in the third_party/ directory,
+which is covered by separate license terms included with that code.
