@@ -16,7 +16,7 @@ Context windows are shared resources. Your skill competes with conversation hist
 **Key question**: Does the AI really need this information, or can you assume it already knows?
 
 **Good** (50 tokens):
-```markdown
+````markdown
 ## Extract PDF text
 
 Use pdfplumber for text extraction:
@@ -27,16 +27,16 @@ import pdfplumber
 with pdfplumber.open("file.pdf") as pdf:
     text = pdf.pages[0].extract_text()
 ```
-```
+````
 
 **Bad** (150 tokens):
-```markdown
+````markdown
 ## Extract PDF text
 
 PDF (Portable Document Format) files are a common file format that contains
 text, images, and other content. To extract text from a PDF, you'll need to
 use a library. There are many libraries available...
-```
+````
 
 ### 2. Match Specificity to Task Fragility
 
@@ -129,14 +129,14 @@ For advanced features, see `reference/advanced-operations.md`.
 Don't ask the AI to write validation logic—provide it.
 
 **Good**:
-```markdown
+````markdown
 Run the validation script:
 ```bash
 python scripts/validate_form.py input.json
 ```
 
 Creates: `validation_report.txt` with any errors found
-```
+````
 
 **Bad**:
 ```markdown
@@ -182,7 +182,7 @@ For complex operations, use a plan-validate-execute pattern:
 Don't assume packages are installed:
 
 **Good**:
-```markdown
+````markdown
 Install required package:
 ```bash
 pip install pypdf
@@ -193,7 +193,7 @@ Then use it:
 from pypdf import PdfReader
 reader = PdfReader("file.pdf")
 ```
-```
+````
 
 **Bad**:
 ```markdown
