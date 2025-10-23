@@ -1,9 +1,9 @@
 ---
-name: skills-authoring-essentials
+name: how-to-write-a-strong-skill-file
 description: Provides practical guidance for writing effective skills files that AI agents can discover and use successfully. Use when creating or improving skills files, or when the user needs help with skills authoring best practices, structure, or patterns.
 ---
 
-# Skills Authoring Essentials
+# How to Write a Strong Skill File
 
 A practical guide for writing effective skills files that AI agents can discover and use successfully.
 
