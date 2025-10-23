@@ -1,0 +1,1 @@
+The [skill-authoring-best-practices.md](skill-authoring-best-practices.md) file was copied from [https://docs.claude.com/en/docs/agents-and-tools/agent-skills/best-practices] on Thursday, October 23, 2025.
