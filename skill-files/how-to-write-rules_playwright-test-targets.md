@@ -22,7 +22,7 @@ use_repo(playwright, "playwright")
 ```
 
 - Match `playwright_version` to the version in your `package.json` to avoid runtime mismatches.
-- When builds are locked down, generate integrity pins with `playwright_integrity_map` (see step 4) and populate `integrity_path_map`.
+- When downloads must be pinned for reproducibility, generate integrity hashes with `playwright_integrity_map` (see step 4) and populate `integrity_path_map`.
 
 ## 2. Link npm dependencies
 
@@ -61,7 +61,7 @@ playwright_bin.playwright_test(
 )
 ```
 
-Key points:
+**Key points**
 
 - Every browser you intend to run must be listed in `data` so Bazel ships it to the test sandbox.
 - `PLAYWRIGHT_BROWSERS_PATH` must point one directory above a browser archive; use `$(rootpath ...)` so the test works remotely.
@@ -89,8 +89,7 @@ playwright_bin.playwright_test(
 
 ### Alternative entrypoints
 
-- `playwright_bin.playwright_binary` behaves like `npx playwright`; reuse it for UI exploration (`--ui`), snapshot updates, or smoke checks.
-- Always reuse the same `DATA` and `ENV` dictionaries so every tool has the same files and browser path.
+Use `playwright_bin.playwright_binary` when you need `npx playwright` behaviour such as UI mode (`--ui`), targeted smoke runs, or snapshot updates. Reuse the same `DATA` and `ENV` dictionaries across these helper targets so every tool sees the identical files and browser paths.
 
 ## 4. Pin browser downloads (optional)
 
